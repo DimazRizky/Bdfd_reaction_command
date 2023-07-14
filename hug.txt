@@ -1,0 +1,15 @@
+$nomention
+$onlyIf[$mentioned[1]!=$authorID;lol, you hug yourself 😂]
+$onlyIf[$mentioned[1]!=$botID;😏?]
+$onlyIf[$mentioned[1]!=; Tag someone after type ``!hug``]
+
+$httpGet[https://nekos.best/api/v2/hug]
+
+$authorIcon[$userAvatar[$authorID]]
+
+$description[**<@$authorID> hugging <@$mentioned[1]>**]
+$image[$httpResult[results;0;url]]
+$color[#$random[1;999999]]
+
+$footer[add_your_name]
+$addTimestamp
